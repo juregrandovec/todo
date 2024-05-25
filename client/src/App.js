@@ -5,6 +5,8 @@ import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import ToDoList from "./pages/ToDo/ToDoList";
 import "./App.css";
+import "antd/dist/reset.css";
+import "dotenv";
 
 function App() {
   return (

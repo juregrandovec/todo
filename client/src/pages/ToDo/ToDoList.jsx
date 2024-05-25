@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../../components/Navbar";
 
 function ToDoList() {
   return (
-    <div>ToDoList</div>
-  )
+    <div>
+      <Navbar active={"myTask"} />
+    </div>
+  );
 }
 
-export default ToDoList
+export default ToDoList;
