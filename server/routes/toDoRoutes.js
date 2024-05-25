@@ -9,7 +9,7 @@ const authenticateToken = require("../middleware/authJwt");
 const router = express.Router();
 
 router.post("/create", authenticateToken, create);
-router.get("/list/:userId", authenticateToken, list);
+router.get("/list/:userId/:type", authenticateToken, list);
 router.delete("/:id", authenticateToken, deleteTodo);
 router.patch("/:id", authenticateToken, update);
 

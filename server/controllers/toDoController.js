@@ -13,9 +13,13 @@ exports.create = async (req, res) => {
 };
 
 exports.list = async (req, res) => {
-  let { userId } = req.params;
+  let { type, userId } = req.params;
+  console.log(type);
   try {
-    const result = await ToDo.find({ createdBy: userId });
+    const result = await ToDo.find({
+      createdBy: userId,
+      isCompleted: type == "Completed",
+    });
     res.send(result);
   } catch (err) {
     res.status(err);
